@@ -1,3 +1,5 @@
+import os
+
 import allure
 import pytest
 
@@ -10,12 +12,24 @@ def pytest_addoption(parser):
 def browserInstance(playwright, request):
     browser_name = request.config.getoption("--browser_name") or "chromium"
 
-    if browser_name == "firefox":
-        browser = playwright.firefox.launch(headless=False)
-    else:
-        browser = playwright.chromium.launch(headless=False, slow_mo=500)
+    # 🔥 Detect CI environment
+    is_ci = os.getenv("CI", "false").lower() == "true"
 
-    context = browser.new_context(java_script_enabled=True, bypass_csp=True)
+    # Headless in CI, headed locally
+    headless = True if is_ci else False
+
+    if browser_name == "firefox":
+        browser = playwright.firefox.launch(headless=headless)
+    else:
+        browser = playwright.chromium.launch(
+            headless=headless,
+            slow_mo=0 if is_ci else 500   # No slow motion in CI (faster)
+        )
+
+    context = browser.new_context(
+        java_script_enabled=True,
+        bypass_csp=True
+    )
 
     # Block ads
     context.route("**/*googlesyndication.com/**", lambda route: route.abort())
