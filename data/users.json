@@ -1,0 +1,39 @@
+{
+  "valid_users": [
+    {
+      "userName": "Kunal",
+      "email": "sikkatest@test.com",
+      "password": "Letmein1@"
+    }
+  ],
+  "invalid_users": [
+    {
+      "email": "wrong@test.com",
+      "password": "wrong123"
+    }
+  ],
+  "emails": [
+    "",
+    "invalidemail",
+    "test@example.com"
+  ],
+  "new_users": [
+    {
+      "userName": "Kunal",
+      "password": "Letmein1@",
+      "day": "29",
+      "month": "June",
+      "year": "1990",
+      "firstName": "Kunal",
+      "lastName": "Sikka",
+      "company": "Swanal Solutions",
+      "address1": "502 A 5A Trishla City",
+      "address2": "High Ground Road",
+      "country": "India",
+      "state": "Haryana",
+      "city": "Zirakpur",
+      "zipcode": "140603",
+      "mobile": "9728181989"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "test_cases": [
+    {
+      "first_brand": "Polo",
+      "second_brand": "H&M"
+    },
+    {
+      "first_brand": "Madame",
+      "second_brand": "Allen Solly"
+    }
+  ]
+}

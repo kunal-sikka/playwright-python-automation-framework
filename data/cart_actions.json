@@ -1,0 +1,12 @@
+{
+  "remove_test_cases": [
+    {
+      "indices": [0],
+      "remove_index": 0
+    },
+    {
+      "indices": [0, 1],
+      "remove_index": 0
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "test_cases": [
+    {
+      "name": "Kunal",
+      "email": "kunal@test.com",
+      "review": "Great product, really liked it!"
+    },
+    {
+      "name": "QA Tester",
+      "email": "qa@test.com",
+      "review": "Good quality and fast delivery."
+    }
+  ]
+}
