@@ -1,3 +1,10 @@
+![CI](https://github.com/kunal-sikka/playwright-python-automation-framework/actions/workflows/tests.yml/badge.svg)
+![Python](https://img.shields.io/badge/python-3.10-blue)
+![Playwright](https://img.shields.io/badge/playwright-automation-green)
+![Pytest](https://img.shields.io/badge/tested%20with-pytest-yellow)
+![Allure](https://img.shields.io/badge/reporting-allure-orange)
+![Status](https://img.shields.io/badge/status-production--ready-brightgreen)
+
 # 🚀 Playwright Python Automation Framework
 
 A scalable end-to-end test automation framework built using **Playwright (Python)**, designed with industry best practices such as **Page Object Model (POM)**, **data-driven testing**, and **CI/CD integration**.
