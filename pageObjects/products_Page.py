@@ -1,4 +1,5 @@
 import allure
+from playwright.sync_api import expect
 
 from pageObjects.base_page import BasePage
 
@@ -103,4 +104,9 @@ class ProductsPage(BasePage):
     def verify_searched_products_visible(self):
         with allure.step("Verify searched products are visible"):
             products = self.page.locator(".product-image-wrapper")
+            expect(products.first).to_be_visible(timeout=5000)
             assert products.count() > 0, "No products visible after search"
+
+    def verify_no_products_found(self):
+        with allure.step("Verify no products found message"):
+            assert self.page.locator("text=No products found").is_visible()

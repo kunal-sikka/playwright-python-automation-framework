@@ -14,10 +14,12 @@ def get_random_message():
         "Random QA message"]
     return random.choice(messages)
 
-def get_random_file(folder_path = "/Users/kunalsikka/Downloads/Test_Images/"):
+def get_random_file():
+    base_dir = os.path.dirname(os.path.dirname(__file__))
+    folder_path = os.path.join(base_dir, "test_data", "files")
+
     files = [f for f in os.listdir(folder_path) if os.path.isfile(os.path.join(folder_path, f))]
-    random_file = random.choice(files)
-    return os.path.join(folder_path, random_file)
+    return os.path.join(folder_path, files[0])
 
 def search_for_a_product():
     search_suggestions = ["t-shirt", "tshirt", "blue-pant", "sleevel", "random", "noPRODuct"]

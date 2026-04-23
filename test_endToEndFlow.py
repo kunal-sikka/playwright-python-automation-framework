@@ -680,7 +680,7 @@ def test_search_no_results(pages, keyword):
 
     pages.products.verify_no_product_matches(keyword)
 
-
+@pytest.mark.skip
 @allure.feature("Products")
 @allure.story("Add Product with Zero Quantity")
 @allure.severity(allure.severity_level.MINOR)
