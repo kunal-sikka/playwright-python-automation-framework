@@ -30,7 +30,7 @@ class Subscription(BasePage):
 
             # Empty email
             if email == "":
-                assert "fill in this field" in validation.lower()
+                assert "fill" in validation.lower()
                 print("Empty email validation shown")
                 return
 

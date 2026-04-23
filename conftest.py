@@ -23,7 +23,7 @@ def browserInstance(playwright, request):
     else:
         browser = playwright.chromium.launch(
             headless=headless,
-            slow_mo=0 if is_ci else 500   # No slow motion in CI (faster)
+            slow_mo=100 if is_ci else 500   # No slow motion in CI (faster)
         )
 
     context = browser.new_context(

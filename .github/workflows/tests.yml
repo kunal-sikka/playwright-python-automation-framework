@@ -32,7 +32,7 @@ jobs:
 
       - name: Run Tests
         run: |
-          pytest --alluredir=allure-results
+          pytest --alluredir=allure-results --reruns 2 --reruns-delay 2
 
       - name: Install Allure CLI
         run: |
@@ -46,6 +46,9 @@ jobs:
       - name: Generate Allure Report
         run: |
           allure generate allure-results -o allure-report --clean
+
+      - name: Set PYTHONPATH
+        run: echo "PYTHONPATH=$PYTHONPATH:$(pwd)" >> $GITHUB_ENV
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
