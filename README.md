@@ -11,6 +11,24 @@ A scalable end-to-end test automation framework built using **Playwright (Python
 
 ---
 
+## 🌐 Live Test Report
+
+👉 https://kunal-sikka.github.io/playwright-python-automation-framework/
+
+---
+
+## 📌 What This Project Demonstrates
+
+This project showcases a **production-style QA automation framework**, including:
+
+- End-to-end UI automation using Playwright
+- Clean architecture using Page Object Model (POM)
+- Data-driven testing strategy
+- CI/CD pipeline with GitHub Actions
+- Live reporting with Allure
+
+---
+
 ## 🔥 Key Highlights
 
 * ✅ Playwright with Python (fast, reliable browser automation)
@@ -87,24 +105,6 @@ allure serve allure-results
 
 ---
 
-## 🌐 Live Test Report
-
-👉 https://kunal-sikka.github.io/playwright-python-automation-framework/
-
----
-
-## 📌 What This Project Demonstrates
-
-This project showcases a **production-style QA automation framework**, including:
-
-- End-to-end UI automation using Playwright
-- Clean architecture using Page Object Model (POM)
-- Data-driven testing strategy
-- CI/CD pipeline with GitHub Actions
-- Live reporting with Allure
-
----
-
 ## ⚡ CI/CD Integration
 
 * GitHub Actions runs tests on every push
@@ -145,6 +145,17 @@ It demonstrates how automation is actually implemented in real-world teams:
 
 ---
 
+## 🤝 How I Can Help
+
+If you're building or scaling automation for your product, I can help with:
+
+- Setting up Playwright/Pytest frameworks from scratch
+- Improving existing flaky test suites
+- CI/CD integration and reporting
+- End-to-end test strategy for SaaS products
+
+---
+
 ## 👨‍💻 Author
 
 **Kunal Sikka**
@@ -158,16 +169,3 @@ QA Automation Engineer | Project Manager
 ## ⭐ Final Note
 
 This project demonstrates a **real-world automation framework setup**, focusing on scalability, maintainability, and CI/CD integration — similar to production-grade QA systems.
-
----
-
-## 🤝 How I Can Help
-
-If you're building or scaling automation for your product, I can help with:
-
-- Setting up Playwright/Pytest frameworks from scratch
-- Improving existing flaky test suites
-- CI/CD integration and reporting
-- End-to-end test strategy for SaaS products
-
----
