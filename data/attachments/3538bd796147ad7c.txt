@@ -1,0 +1,1 @@
+Price: 400, Qty: 3, Total: 1200
