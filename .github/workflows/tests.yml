@@ -23,32 +23,26 @@ jobs:
       - name: Install Dependencies
         run: |
           pip install -r requirements.txt
-          pip install allure-pytest
 
       - name: Install Playwright Browsers
         run: |
           pip install playwright
           playwright install --with-deps
 
+      - name: Set PYTHONPATH
+        run: echo "PYTHONPATH=$PYTHONPATH:$(pwd)" >> $GITHUB_ENV
+
       - name: Run Tests
         run: |
           pytest --alluredir=allure-results --reruns 2 --reruns-delay 2
 
-      - name: Install Allure CLI
+      - name: Install Allure
         run: |
-          sudo apt-get update
-          sudo apt-get install -y default-jre
-          wget https://github.com/allure-framework/allure2/releases/latest/download/allure-2.27.0.tgz
-          tar -zxvf allure-2.27.0.tgz
-          sudo mv allure-2.27.0 /opt/allure
-          sudo ln -s /opt/allure/bin/allure /usr/bin/allure
+          npm install -g allure-commandline --save-dev
 
       - name: Generate Allure Report
         run: |
           allure generate allure-results -o allure-report --clean
-
-      - name: Set PYTHONPATH
-        run: echo "PYTHONPATH=$PYTHONPATH:$(pwd)" >> $GITHUB_ENV
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
